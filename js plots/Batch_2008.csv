@@ -1,0 +1,7 @@
+Camera Batch,Time Interval,P-Value,95% C.I.
+batch 2008,three-month,0.383,[-0.246,∞)
+control group,three-month,0.057,[-0.0009, ∞]
+batch 2008,six-month,0.288,[-0.354, ∞)
+control group,six-month,0.001,[0.031, ∞)
+batch 2008, one-year, 0.208, [-0.286, 1.286]
+control group, one-year,0.560,[-0.051, 0.094]
