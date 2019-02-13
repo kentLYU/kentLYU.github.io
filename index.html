@@ -1,152 +1,115 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1561.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Menlo; color: #31a354; -webkit-text-stroke: #31a354}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Menlo; color: #3182bd; -webkit-text-stroke: #3182bd}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Menlo; color: #636363; -webkit-text-stroke: #636363}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Menlo; color: #756bb1; -webkit-text-stroke: #756bb1}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Menlo; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Menlo; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
-    span.s3 {font-kerning: none; color: #3182bd; -webkit-text-stroke: 0px #3182bd}
-    span.s4 {font-kerning: none; color: #e6550d; -webkit-text-stroke: 0px #e6550d}
-    span.s5 {font-kerning: none; color: #31a354; -webkit-text-stroke: 0px #31a354}
-    span.s6 {font-kerning: none; color: #636363; -webkit-text-stroke: 0px #636363}
-    span.s7 {font-kerning: none; color: #756bb1; -webkit-text-stroke: 0px #756bb1}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p2"><span class="s1">&lt;html&gt;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;head&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Load D3 from site --&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;script </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"http://d3js.org/d3.v3.min.js"</span><span class="s3"> </span><span class="s4">charset</span><span class="s3">=</span><span class="s1">"utf-8"</span><span class="s3">&gt;&lt;/script&gt;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/head&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- CSS (Styling) --&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;style </span><span class="s4">type</span><span class="s3">=</span><span class="s1">"text/css"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">/* Format X and Y Axis */</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">.axis</span><span class="s1"> </span><span class="s3">path</span><span class="s1">,</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">.axis</span><span class="s1"> </span><span class="s3">line</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s4">fill</span><span class="s1">: none;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s4">stroke</span><span class="s1">: black;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s4">shape-rendering</span><span class="s1">: crispEdges;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">.axis</span><span class="s1"> </span><span class="s3">text</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s4">font-family</span><span class="s1">: sans-serif;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s4">font-size</span><span class="s1">: </span><span class="s5">11px</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;/style&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- End CSS (Styling) --&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;body&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;h2&gt;</span><span class="s1">D3 Scatterplot </span><span class="s3">&lt;/h2&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;p&gt;</span><span class="s1">This is a data visualization using transitions with a scatterplot</span><span class="s3">&lt;/p&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;h4&gt;</span><span class="s1">Click on this text to update chart with new values</span><span class="s3">&lt;/h4&gt;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;h3&gt;&lt;/h3&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Begin D3 Javascript --&gt;</span></p>
-<p class="p4"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;script </span><span class="s4">type</span><span class="s3">=</span><span class="s1">"text/javascript"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">// Setup data</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> dataset = [];<span class="Apple-converted-space">  </span></span><span class="s6">// Initialize empty array</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> numDataPoints = </span><span class="s5">100</span><span class="s1">;<span class="Apple-converted-space">  </span></span><span class="s6">// Number of dummy data points</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> maxRange = Math.random() * </span><span class="s5">1000</span><span class="s1">;<span class="Apple-converted-space">  </span></span><span class="s6">// Max range of new values</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">for</span><span class="s1">(</span><span class="s3">var</span><span class="s1"> i=</span><span class="s5">0</span><span class="s1">; i&lt;numDataPoints; i++) {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">var</span><span class="s1"> newNumber1 = Math.floor(Math.random() * maxRange);<span class="Apple-converted-space">  </span></span><span class="s6">// New random integer</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">var</span><span class="s1"> newNumber2 = Math.floor(Math.random() * maxRange);<span class="Apple-converted-space">  </span></span><span class="s6">// New random integer</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>dataset.push([newNumber1, newNumber2]);<span class="Apple-converted-space">  </span></span><span class="s6">// Add new number to array</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// Setup settings for graphic</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> canvas_width = </span><span class="s5">500</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> canvas_height = </span><span class="s5">300</span><span class="s1">;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> padding = </span><span class="s5">30</span><span class="s1">;<span class="Apple-converted-space">  </span></span><span class="s6">// for chart edges</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// Create scale functions</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> xScale = d3.scale.linear()<span class="Apple-converted-space">  </span></span><span class="s6">// xScale is width of graphic</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.domain([</span><span class="s5">0</span><span class="s1">, d3.max(dataset, </span><span class="s3">function</span><span class="s1">(d) {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">return</span><span class="s1"> d[</span><span class="s5">0</span><span class="s1">];<span class="Apple-converted-space">  </span></span><span class="s6">// input domain</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>})])</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.range([padding, canvas_width - padding * </span><span class="s5">2</span><span class="s1">]); </span><span class="s6">// output range</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> yScale = d3.scale.linear()<span class="Apple-converted-space">  </span></span><span class="s6">// yScale is height of graphic</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.domain([</span><span class="s5">0</span><span class="s1">, d3.max(dataset, </span><span class="s3">function</span><span class="s1">(d) {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">return</span><span class="s1"> d[</span><span class="s5">1</span><span class="s1">];<span class="Apple-converted-space">  </span></span><span class="s6">// input domain</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>})])</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.range([canvas_height - padding, padding]);<span class="Apple-converted-space">  </span></span><span class="s6">// remember y starts on top going down so we flip</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// Define X axis</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> xAxis = d3.svg.axis()</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.scale(xScale)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.orient(</span><span class="s7">"bottom"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.ticks(</span><span class="s5">5</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// Define Y axis</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> yAxis = d3.svg.axis()</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.scale(yScale)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.orient(</span><span class="s7">"left"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span>.ticks(</span><span class="s5">5</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// Create SVG element</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">var</span><span class="s1"> svg = d3.select(</span><span class="s7">"h3"</span><span class="s1">)<span class="Apple-converted-space">  </span></span><span class="s6">// This is where we put our vis</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.append(</span><span class="s7">"svg"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"width"</span><span class="s1">, canvas_width)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"height"</span><span class="s1">, canvas_height)</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// Create Circles</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span>svg.selectAll(</span><span class="s7">"circle"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.data(dataset)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.enter()</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.append(</span><span class="s7">"circle"</span><span class="s1">)<span class="Apple-converted-space">  </span></span><span class="s6">// Add circle svg</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"cx"</span><span class="s1">, </span><span class="s3">function</span><span class="s1">(d) {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">return</span><span class="s1"> xScale(d[</span><span class="s5">0</span><span class="s1">]);<span class="Apple-converted-space">  </span></span><span class="s6">// Circle's X</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"cy"</span><span class="s1">, </span><span class="s3">function</span><span class="s1">(d) {<span class="Apple-converted-space">  </span></span><span class="s6">// Circle's Y</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">return</span><span class="s1"> yScale(d[</span><span class="s5">1</span><span class="s1">]);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"r"</span><span class="s1">, </span><span class="s5">2</span><span class="s1">);<span class="Apple-converted-space">  </span></span><span class="s6">// radius</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// Add to X axis</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span>svg.append(</span><span class="s7">"g"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"class"</span><span class="s1">, </span><span class="s7">"x axis"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"transform"</span><span class="s1">, </span><span class="s7">"translate(0,"</span><span class="s1"> + (canvas_height - padding) +</span><span class="s7">")"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.call(xAxis);</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// Add to Y axis</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span>svg.append(</span><span class="s7">"g"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"class"</span><span class="s1">, </span><span class="s7">"y axis"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.attr(</span><span class="s7">"transform"</span><span class="s1">, </span><span class="s7">"translate("</span><span class="s1"> + padding +</span><span class="s7">",0)"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.call(yAxis);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">// On click, update with new data</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span>d3.select(</span><span class="s7">"h4"</span><span class="s1">)</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span>.on(</span><span class="s7">"click"</span><span class="s1">, </span><span class="s3">function</span><span class="s1">() {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">var</span><span class="s1"> numValues = dataset.length;<span class="Apple-converted-space">  </span></span><span class="s6">// Get original dataset's length</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">var</span><span class="s1"> maxRange = Math.random() * </span><span class="s5">1000</span><span class="s1">;<span class="Apple-converted-space">  </span></span><span class="s6">// Get max range of new values</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span>dataset = [];<span class="Apple-converted-space">  </span></span><span class="s6">// Initialize empty array</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">for</span><span class="s1">(</span><span class="s3">var</span><span class="s1"> i=</span><span class="s5">0</span><span class="s1">; i&lt;numValues; i++) {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">var</span><span class="s1"> newNumber1 = Math.floor(Math.random() * maxRange);<span class="Apple-converted-space">  </span></span><span class="s6">// Random int for x</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">var</span><span class="s1"> newNumber2 = Math.floor(Math.random() * maxRange);<span class="Apple-converted-space">  </span></span><span class="s6">// Random int for y</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                        </span>dataset.push([newNumber1, newNumber2]);<span class="Apple-converted-space">  </span></span><span class="s6">// Add new numbers to array</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">                    </span></span><span class="s1">// Update scale domains</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span>xScale.domain([</span><span class="s5">0</span><span class="s1">, d3.max(dataset, </span><span class="s3">function</span><span class="s1">(d) {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">return</span><span class="s1"> d[</span><span class="s5">0</span><span class="s1">]; })]);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span>yScale.domain([</span><span class="s5">0</span><span class="s1">, d3.max(dataset, </span><span class="s3">function</span><span class="s1">(d) {</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">return</span><span class="s1"> d[</span><span class="s5">1</span><span class="s1">]; })]);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/script&gt;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/body&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/html&gt;</span></p>
+<title>Keting Lyu | Kevin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Noto Sans", sans-serif}
+</style>
+<body class="w3-white">
+
+
+<!-- Homepage -->
+<div class="w3-content w3-light-grey" style="max-width:1920px">
+
+<!-- Navigation -->
+<div class="w3-top">
+
+<!-- Grid -->
+<div class="w3-row">
+  <div class="w3-col l2 m1 s0"><h3></h3></div>
+
+  <!-- Navigation Bar -->
+  <div class="w3-col l8 m10 s12">
+    <br>
+    <div class="w3-bar w3-card-4 w3-white">
+      <a href="index.html" class="w3-button w3-hover-white" style="width:24%">Home</a>
+      
+      <a href="profile.html" class="w3-button w3-text-hover-black w3-hover-white" style="width:24%; color:rgb(200, 200, 200);">Profile</a>
+
+      <a href="research.html" class="w3-button w3-text-hover-black w3-hover-white" style="width:24%; color:rgb(200, 200, 200);">Research</a>
+      
+      <a href="fun.html" class="w3-button w3-text-hover-black w3-hover-white" style="width:24%; color:rgb(200, 200, 200);">Fun</a>
+    </div>
+  </div>
+
+  <div class="w3-col l2 m1 s0"><h3></h3></div>
+<!-- END Grid -->
+</div>
+<!-- END Navigation -->
+</div><br><br><br><br>
+
+
+<!-- Header -->
+<!-- Grid -->
+<div class="w3-row">
+  <div class="w3-col l2 m1 s0"><h3></h3></div>
+
+  <div class="w3-col l8 m10 s12">
+    
+          <div class="w3-card-2">
+          <img src="images/header.jpg" alt="header" style="width:100%">
+      </div>
+    
+    <header class="w3-container w3-small w3-card-2 w3-white">
+      <h4><b>Keting Lyu | Kevin</b></h4>
+      <p style="color:rgb(75, 75, 75);" align="right">“There's no fate but what we make for ourselves.”<br>
+          —— <I> Terminator 2 </I> </p>      
+    </header>
+  </div>
+
+  <div class="w3-col l2 m1 s0"><h3></h3></div>
+<!-- END Grid -->
+</div><br>
+
+    
+<!-- Content -->
+<!-- Grid -->
+<div class="w3-row">
+  <div class="w3-col l3 m2 s1"><h3></h3></div>
+
+  <!-- Main Contents -->
+  <div class="w3-col l6 m8 s10">
+
+      
+      <div class="w3-card-2 w3-white w3-padding">
+        <p align="center">
+          
+          <img src="images/photo.jpg" alt="header" style="width:40%"><br><br>
+          
+          <b> Keting Lyu | 吕柯亭 </b> <br>
+          
+          <br>
+          
+          Research Assistant at URMC | Information Service at GECDAC <br>
+          
+          
+          <br>
+          
+          M.S. in Data Science, U. of Rochester '17 <br>
+
+          M.A. in Finance and Computer Science Double Major, BJFU '16 <br>
+          
+          <br>
+
+          Proven data analytics consultant with experience in data analysis, data visualization and data mining seeking data analyst opportunities. <br>
+
+        </p>
+      </div><br>
+      
+
+  </div>
+
+  <div class="w3-col l3 m2 s1"><h3></h3></div>
+<!-- END Grid -->
+</div><br><br>
+    
+
+<!-- END Homepage -->
+</div>
+
+
 </body>
 </html>
